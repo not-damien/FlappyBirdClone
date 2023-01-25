@@ -1,25 +1,34 @@
-constructor(game,x,y) {
-        this.game = game;
-        this.x = x;
-        this.y = y;
-        this.speed = 1;
-        this.gravity = 1
-        this.velocityX = 0;
-        this.velocityY = 0;
-        //todo 
-        //this.spritesheet = ASSET_MANAGER.getAsset("./assets/FlappyDog.png");
-    };
+class player {
+
+  constructor(game, x, y) {
+    this.game = game;
+    this.x = x;
+    this.y = y;
+    this.speed = 3;
+    this.gravity = 1
+    this.velocityX = 2;
+    this.velocityY = 0;
+    //todo 
+    this.spritesheet = ASSET_MANAGER.getAsset("./pochita pixel boi.png");
+  };
 
 
-update() {
-  //todo
-   if(this.game.keys["Space"] == true){
-     this.velocityY += speed;
-   }
-  this.y = (this.y - this.velocityY) + this.gravity;
-  this.velocityY = 0;
+  update() {
+    //todo
+    if (this.game.keys[" "] == true) {
+      this.velocityY += this.speed;
+    }
+    this.y = (this.y - this.velocityY) + this.gravity;
+    this.x += this.velocityX;
+    this.velocityY = 0;
+  };
+
+  draw(ctx) {//todo add animation 
+    ctx.drawImage(this.spritesheet, this.x, this.y, 62, 47);
+  };
+
+  updateBox() {
+    this.BoundingBox = new BoundingBox(this.x, this.y, 62, 47);
+  }
+
 }
-
- draw(ctx){//todo add animation 
-        ctx.drawImage(this.spritesheet, this.x, this.y,54,22);
-    };
