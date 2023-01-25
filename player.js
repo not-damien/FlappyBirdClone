@@ -17,6 +17,7 @@ class player {
     //todo
     if (this.game.keys[" "] == true) {
       this.velocityY += this.speed;
+      ASSET_MANAGER.playAsset("./Pochita Barks.mp3")
     }
     this.y = (this.y - this.velocityY) + this.gravity;
     this.x += this.velocityX;

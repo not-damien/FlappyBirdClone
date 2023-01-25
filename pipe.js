@@ -7,14 +7,17 @@ class pipe {
         this.BoundingBox = new BoundingBox(this.x, this.y, 50, 100);
     };
     update() {
-        
+
     };
     draw(ctx) {
-        ctx.drawImage(this.spritesheet, this.x, this.y, 50, 100);
+        ctx.drawImage(this.spritesheet, this.x, this.y, 50, 500);
         this.BoundingBox.draw(ctx);
+        
     };
     updateBox() {
-        this.BoundingBox = new BoundingBox(this.x, this.y, 50, 100);
+        
+        this.BoundingBox = new BoundingBox(this.x, this.y, 50, 500);
+        
     }
 
 
