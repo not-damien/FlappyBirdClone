@@ -58,7 +58,14 @@ class SceneManager{
     };
 
     draw(ctx){
-       
+        ctx.fillStyle = "White";
+        ctx.font = "bold 48px serif";
+        ctx.textAlign = 'center';
+        ctx.fillText(this.playerCharacter.points, 240, 150);
+        if(this.playerCharacter.dead){
+            ctx.fillStyle = "red"
+            ctx.fillText("You Lose",240,200)   
+        }
     };
 
 };

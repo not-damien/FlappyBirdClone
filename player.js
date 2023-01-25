@@ -12,6 +12,7 @@ class player {
     this.spritesheet = ASSET_MANAGER.getAsset("./pochita pixel boi.png");
     this.BoundingBox = new BoundingBox(this.x, this.y, 62, 47);
     this.points = 0;
+    this.dead = false;
   };
 
 
@@ -43,6 +44,8 @@ class player {
             if (entity instanceof pipe) {
                 console.log("this is pipe");
                 this.velocityX = 0;
+                this.gravity = 100
+                this.dead = true;
             }
             if(entity instanceof coin){
                 ASSET_MANAGER.playAsset("./coin.mp3")
