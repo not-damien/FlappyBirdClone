@@ -21,6 +21,9 @@ class player {
     if (this.game.keys[" "] == true) {
       this.velocityY += this.speed;
       ASSET_MANAGER.playAsset("./Pochita Barks.mp3")
+      if(this.dead){
+        location.reload();
+      }
     }
     this.updateBox();
     this.collisionCheck();

@@ -64,7 +64,9 @@ class SceneManager{
         ctx.fillText(this.playerCharacter.points, 240, 150);
         if(this.playerCharacter.dead){
             ctx.fillStyle = "red"
-            ctx.fillText("You Lose",240,200)   
+            ctx.fillText("You Lose",240,200)
+            ctx.font = "bold 30px serif";
+            ctx.fillText("Press Space To try Again",240,300)   
         }
     };
 
