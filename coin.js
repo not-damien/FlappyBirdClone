@@ -4,7 +4,7 @@ class coin {
         this.x = x;
         this.y = y;
         this.spritesheet = ASSET_MANAGER.getAsset("./pipe.png");
-        this.BoundingBox = new BoundingBox(this.x, this.y, 50, 100);
+        this.BoundingBox = new BoundingBox(this.x, this.y, 5, 100);
     };
     update() {
 
@@ -15,7 +15,7 @@ class coin {
     };
     updateBox() {
         
-        this.BoundingBox = new BoundingBox(this.x, this.y, 10, 100);
+        this.BoundingBox = new BoundingBox(this.x, this.y, 5, 100);
         
     }
 
