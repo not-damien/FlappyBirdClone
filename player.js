@@ -30,7 +30,7 @@ class player {
 
   draw(ctx) {//todo add animation 
     ctx.drawImage(this.spritesheet, this.x, this.y, 62, 47);
-    this.BoundingBox.draw(ctx);
+    //this.BoundingBox.draw(ctx);
   };
 
   updateBox() {
@@ -49,6 +49,8 @@ class player {
               if(this.timeout >32){
                 console.log("this is coin "+ this.timeout);
                 ASSET_MANAGER.playAsset("./coin.mp3")
+                //remove coin
+                entity.removeFromWorld = true;
                 this.timeout = 0;
               }
             }

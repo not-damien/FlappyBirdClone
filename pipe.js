@@ -11,7 +11,7 @@ class pipe {
     };
     draw(ctx) {
         ctx.drawImage(this.spritesheet, this.x, this.y, 50, 500);
-        this.BoundingBox.draw(ctx);
+       // this.BoundingBox.draw(ctx);
         
     };
     updateBox() {

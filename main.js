@@ -6,6 +6,7 @@ ASSET_MANAGER.queueDownload("./pipe.png")
 ASSET_MANAGER.queueDownload("./Pochita Barks.mp3")
 ASSET_MANAGER.queueDownload("./kickbackLofi.mp3")
 ASSET_MANAGER.queueDownload("./coin.mp3")
+ASSET_MANAGER.queueDownload("./coin.png")
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");
