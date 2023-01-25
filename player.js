@@ -11,7 +11,7 @@ class player {
     //todo 
     this.spritesheet = ASSET_MANAGER.getAsset("./pochita pixel boi.png");
     this.BoundingBox = new BoundingBox(this.x, this.y, 62, 47);
-    this.timeout = 0;
+    this.points = 0;
   };
 
 
@@ -45,14 +45,11 @@ class player {
                 this.velocityX = 0;
             }
             if(entity instanceof coin){
-              this.timeout++;
-              if(this.timeout >32){
-                console.log("this is coin "+ this.timeout);
                 ASSET_MANAGER.playAsset("./coin.mp3")
                 //remove coin
                 entity.removeFromWorld = true;
-                this.timeout = 0;
-              }
+                this.points++
+                console.log(this.points)
             }
         }
     });
