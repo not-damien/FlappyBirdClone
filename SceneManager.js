@@ -8,7 +8,7 @@ class SceneManager{
         this.y = 0;
         this.score = 0;
 
-        this.playerCharacter = new player(this.game,-60, 0);
+        this.playerCharacter = new player(this.game,-60, 400);
         this.elapsedTime = 0;
       //  this.loadLevel(levelOne, 50,550);
         this.loadLevel();
@@ -22,11 +22,12 @@ class SceneManager{
     loadLevel(){
     
         this.game.addEntity(this.playerCharacter);
-        this.game.addEntity(new pipe(this.game,500,400))
-        this.game.addEntity(new pipe(this.game,600,400))
-        this.game.addEntity(new pipe(this.game,700,400))
-        this.game.addEntity(new pipe(this.game,800,400))
-        this.game.addEntity(new pipe(this.game,900,400))
+        for(let i = 500; i < 10000;i += 200){
+            let offset = Math.floor(Math.random() * 100)
+            this.game.addEntity(new pipe(this.game,i,400 + offset ))
+            this.game.addEntity(new coin(this.game,i+ 30, 300 + offset))
+            this.game.addEntity(new pipe(this.game,i, -200 + offset ))
+        }
     };
 
 
