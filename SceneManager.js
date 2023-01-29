@@ -20,7 +20,7 @@ class SceneManager{
         });
     };
     loadLevel(){
-    
+    ASSET_MANAGER.adjustVolume(.2)
         this.game.addEntity(this.playerCharacter);
         for(let i = 500; i < 10000;i += 200){
             let offset = Math.floor(Math.random() * 100)

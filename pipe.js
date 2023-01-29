@@ -3,7 +3,7 @@ class pipe {
         this.game = game;
         this.x = x;
         this.y = y;
-        this.spritesheet = ASSET_MANAGER.getAsset("./pipe.png");
+        this.spritesheet = ASSET_MANAGER.getAsset("./chainPipe.png");
         this.BoundingBox = new BoundingBox(this.x, this.y, 50, 100);
     };
     update() {
