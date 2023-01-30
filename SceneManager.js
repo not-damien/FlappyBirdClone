@@ -59,13 +59,13 @@ class SceneManager{
 
     draw(ctx){
         ctx.fillStyle = "White";
-        ctx.font = "bold 48px serif";
+        ctx.font = "45px SpecialElite-Regular";;
         ctx.textAlign = 'center';
         ctx.fillText(this.playerCharacter.points, 240, 150);
         if(this.playerCharacter.dead){
             ctx.fillStyle = "red"
             ctx.fillText("You Lose",240,200)
-            ctx.font = "bold 30px serif";
+            ctx.font = "35px SpecialElite-Regular";
             ctx.fillText("Press Space To try Again",240,300)   
         }
     };
