@@ -25,7 +25,7 @@ class SceneManager{
         for(let i = 500; i < 10000;i += 200){
             let offset = Math.floor(Math.random() * 100)
             this.game.addEntity(new pipe(this.game,i,400 + offset ))
-            this.game.addEntity(new coin(this.game,i+ 30, 300 + offset))
+            this.game.addEntity(new coin(this.game,i, 300 + offset))
             this.game.addEntity(new pipe(this.game,i, -200 + offset ))
         }
     };
