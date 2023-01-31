@@ -20,12 +20,12 @@ class SceneManager{
         });
     };
     loadLevel(){
-    
+    ASSET_MANAGER.adjustVolume(.2)
         this.game.addEntity(this.playerCharacter);
         for(let i = 500; i < 10000;i += 200){
             let offset = Math.floor(Math.random() * 100)
             this.game.addEntity(new pipe(this.game,i,400 + offset ))
-            this.game.addEntity(new coin(this.game,i+ 30, 300 + offset))
+            this.game.addEntity(new coin(this.game,i, 300 + offset))
             this.game.addEntity(new pipe(this.game,i, -200 + offset ))
         }
     };
@@ -59,13 +59,13 @@ class SceneManager{
 
     draw(ctx){
         ctx.fillStyle = "White";
-        ctx.font = "bold 48px serif";
+        ctx.font = "45px SpecialElite-Regular";;
         ctx.textAlign = 'center';
         ctx.fillText(this.playerCharacter.points, 240, 150);
         if(this.playerCharacter.dead){
             ctx.fillStyle = "red"
             ctx.fillText("You Lose",240,200)
-            ctx.font = "bold 30px serif";
+            ctx.font = "35px SpecialElite-Regular";
             ctx.fillText("Press Space To try Again",240,300)   
         }
     };

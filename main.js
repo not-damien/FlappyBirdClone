@@ -2,11 +2,13 @@ const gameEngine = new GameEngine();
 
 const ASSET_MANAGER = new AssetManager();
 ASSET_MANAGER.queueDownload("./pochita pixel boi.png")
-ASSET_MANAGER.queueDownload("./pipe.png")
+ASSET_MANAGER.queueDownload("./chainPipe.png")
+ASSET_MANAGER.queueDownload("./chainsawAni.png")
 ASSET_MANAGER.queueDownload("./Pochita Barks.mp3")
 ASSET_MANAGER.queueDownload("./kickbackLofi.mp3")
 ASSET_MANAGER.queueDownload("./coin.mp3")
 ASSET_MANAGER.queueDownload("./coin.png")
+ASSET_MANAGER.queueDownload("./bread.png")
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");

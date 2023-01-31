@@ -30,6 +30,9 @@ class player {
     this.y = (this.y - this.velocityY) + this.gravity;
     this.x += this.velocityX;
     this.velocityY = 0;
+    if(this.points == 1){
+      ASSET_MANAGER.playAsset("./kickbackLofi.mp3");
+    }
   };
 
   draw(ctx) {//todo add animation 
