@@ -37,7 +37,7 @@ class player {
 
   draw(ctx) {//todo add animation 
     ctx.drawImage(this.spritesheet, this.x, this.y, 62, 47);
-    //this.BoundingBox.draw(ctx);
+   // this.BoundingBox.draw(ctx);
   };
 
   updateBox() {
@@ -58,6 +58,7 @@ class player {
                 //remove coin
                 entity.removeFromWorld = true;
                 this.points++
+                this.velocityX+= .2;
                 console.log(this.points)
             }
         }
