@@ -19,7 +19,7 @@ class pipe {
     };
     updateBox() {
         
-        this.BoundingBox = new BoundingBox(this.x, this.y, 50, 500);
+        this.BoundingBox = new BoundingBox(this.x, this.y +5, 50, 490);
         
     }
 
